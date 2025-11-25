@@ -3,257 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Anime PoC - TypeScript proof-of-concept fetching data from Jikan API with comprehensive test results">
-  <meta name="author" content="Anime PoC Team">
-  <title>ANIME POC - JIKAN API INTEGRATION</title>
+  <meta name="description" content="Anime PoC - Data Analysis of Sousou no Frieren">
+  <title data-i18n="title">ANIME POC - DATA ANALYSIS</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+  <!-- LANGUAGE SWITCHER -->
+  <div class="lang-switcher-container">
+    <select id="language-select" class="lang-select" aria-label="Select Language">
+      <option value="en">English</option>
+      <option value="es">Español</option>
+      <option value="zh">中文 (Chinese)</option>
+      <option value="hi">हिन्दी (Hindi)</option>
+      <option value="ar">العربية (Arabic)</option>
+      <option value="pt">Português</option>
+      <option value="fr">Français</option>
+      <option value="ru">Русский (Russian)</option>
+      <option value="de">Deutsch</option>
+      <option value="id">Bahasa Indonesia</option>
+      <option value="ja">日本語 (Japanese)</option>
+    </select>
+  </div>
+
   <!-- MARQUEE BANNER -->
-  <div class="marquee" role="banner" aria-label="Scrolling banner">
+  <div class="marquee" role="banner">
     <div class="marquee-content">
-      <span class="marquee-item">★ ANIME POC ★</span>
-      <span class="marquee-item">★ TYPESCRIPT ★</span>
-      <span class="marquee-item">★ JIKAN API ★</span>
-      <span class="marquee-item">★ 16/16 TESTS PASSED ★</span>
-      <span class="marquee-item">★ ANIME POC ★</span>
-      <span class="marquee-item">★ TYPESCRIPT ★</span>
-      <span class="marquee-item">★ JIKAN API ★</span>
-      <span class="marquee-item">★ 16/16 TESTS PASSED ★</span>
+      <span class="marquee-item" data-i18n="marquee">★ ANIME POC ★ DATA ANALYSIS ★ FRIEREN ★</span>
+      <span class="marquee-item" data-i18n="marquee">★ ANIME POC ★ DATA ANALYSIS ★ FRIEREN ★</span>
     </div>
   </div>
 
   <div class="container">
     
     <!-- HERO SECTION -->
-    <section class="hero" aria-labelledby="hero-title">
-      <h1 id="hero-title">ANIME POC</h1>
-      <p>A TypeScript Proof-of-Concept demonstrating live data fetching from the Jikan API (MyAnimeList scraper) with strict type safety, comprehensive testing, and zero external test dependencies.</p>
+    <section class="hero">
+      <h1 id="hero-title" data-i18n="hero_title">DATA DEEP DIVE: FRIEREN</h1>
+      <p data-i18n="hero_desc">An analytical review of the data integrity and schema validation for 'Sousou no Frieren' using the Jikan API.</p>
     </section>
 
-    <!-- TEST RESULTS STATS -->
-    <section class="section" aria-labelledby="stats-title">
-      <h2 id="stats-title">TEST RESULTS</h2>
-      <div class="stats-grid">
-        <div class="stat-box">
-          <span class="stat-number">16/16</span>
-          <span class="stat-label">Tests Passed</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">100%</span>
-          <span class="stat-label">Success Rate</span>
-        </div>
-        <div class="stat-box">
-          <span class="stat-number">~4s</span>
-          <span class="stat-label">Execution Time</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- UNIT TESTS BREAKDOWN -->
-    <section class="section" aria-labelledby="unit-tests-title">
-      <div class="card card--yellow">
-        <h2 id="unit-tests-title">UNIT TEST BREAKDOWN</h2>
-        <p>Custom test framework built from scratch - zero external dependencies!</p>
-        
-        <table class="results-table">
-          <thead>
-            <tr>
-              <th>Test Suite</th>
-              <th>Tests</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Schema Validation</td>
-              <td>7</td>
-              <td><span class="checkmark">✓</span> PASSED</td>
-            </tr>
-            <tr>
-              <td>Data Mapping Logic</td>
-              <td>5</td>
-              <td><span class="checkmark">✓</span> PASSED</td>
-            </tr>
-            <tr>
-              <td>Error Handling</td>
-              <td>3</td>
-              <td><span class="checkmark">✓</span> PASSED</td>
-            </tr>
-            <tr>
-              <td>Integration Tests (Live API)</td>
-              <td>1</td>
-              <td><span class="checkmark">✓</span> PASSED</td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- POC RESULTS -->
-    <section class="section" aria-labelledby="poc-title">
-      <div class="card card--cyan">
-        <h2 id="poc-title">POC INTEGRATION TEST</h2>
-        <p><strong>Test Anime:</strong> <code>Sousou no Frieren</code> (MAL ID: 52991)</p>
-        <p><strong>Score:</strong> 9.29/10 | <strong>Rank:</strong> #1</p>
-        
-        <h3>Verified Data Points:</h3>
-        <table class="results-table">
-          <thead>
-            <tr>
-              <th>Component</th>
-              <th>Verification</th>
-              <th>Status</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>Metadata</td>
-              <td>Title, synopsis, episodes, rating</td>
-              <td><span class="checkmark">✓</span></td>
-            </tr>
-            <tr>
-              <td>Company/Studio</td>
-              <td>Madhouse verified as Studio</td>
-              <td><span class="checkmark">✓</span></td>
-            </tr>
-            <tr>
-              <td>Character Data</td>
-              <td>Main character Frieren exists</td>
-              <td><span class="checkmark">✓</span></td>
-            </tr>
-            <tr>
-              <td>Voice Actors</td>
-              <td>Tanezaki Atsumi (Japanese VA)</td>
-              <td><span class="checkmark">✓</span></td>
-            </tr>
-            <tr>
-              <td>Staff</td>
-              <td>Music staff verified</td>
-              <td><span class="checkmark">✓</span></td>
-            </tr>
-            <tr>
-              <td>Themes</td>
-              <td>Opening/Ending themes present</td>
-              <td><span class="checkmark">✓</span></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- SCHEMA OVERVIEW -->
-    <section class="section" aria-labelledby="schema-title">
-      <div class="card card--pink">
-        <h2 id="schema-title">SCHEMA INTERFACES</h2>
-        <p>15+ TypeScript interfaces with strict type safety:</p>
-        
-        <div class="tech-stack">
-          <span class="tech-badge">Anime</span>
-          <span class="tech-badge">AnimeStats</span>
-          <span class="tech-badge">Genre</span>
-          <span class="tech-badge">Company</span>
-          <span class="tech-badge">Person</span>
-          <span class="tech-badge">Character</span>
-          <span class="tech-badge">AnimeCharacter</span>
-          <span class="tech-badge">AnimeStaff</span>
-          <span class="tech-badge">AnimeCompany</span>
-          <span class="tech-badge">AnimeTheme</span>
-          <span class="tech-badge">RelatedEntry</span>
-          <span class="tech-badge">VoiceActorAssignment</span>
-        </div>
-      </div>
-    </section>
-
-    <!-- TECH STACK -->
-    <section class="section" aria-labelledby="tech-title">
-      <h2 id="tech-title">TECHNOLOGY STACK</h2>
+    <!-- ARTICLE CONTENT -->
+    <article class="article-content">
       
-      <div class="card">
-        <h3>Core Technologies</h3>
-        <div class="tech-stack">
-          <span class="tech-badge">TypeScript 5.9+</span>
-          <span class="tech-badge">Node.js 18+</span>
-          <span class="tech-badge">TSX</span>
-          <span class="tech-badge">Jikan API v4</span>
+      <!-- INTRODUCTION -->
+      <section class="section">
+        <div class="card card--yellow">
+          <h2 data-i18n="intro_title">INTRODUCTION</h2>
+          <p data-i18n="intro_text">The Proof-of-Concept (PoC) aimed to validate strict TypeScript schemas against live data from the Jikan API. The target subject was 'Sousou no Frieren' (MAL ID: 52991), chosen for its complex metadata and high ranking.</p>
         </div>
-      </div>
+      </section>
 
-      <div class="card">
-        <h3>Features</h3>
-        <div class="tech-stack">
-          <span class="tech-badge">Strict Type Safety</span>
-          <span class="tech-badge">API Integration</span>
-          <span class="tech-badge">Data Mapping</span>
-          <span class="tech-badge">Custom Test Framework</span>
-          <span class="tech-badge">Rate Limiting</span>
-          <span class="tech-badge">Error Handling</span>
+      <!-- METADATA ANALYSIS -->
+      <section class="section">
+        <div class="card card--cyan">
+          <h2 data-i18n="meta_title">METADATA INTEGRITY</h2>
+          <p data-i18n="meta_text">The fetcher successfully retrieved the core metadata. The title 'Sousou no Frieren' and its Japanese counterpart '葬送のフリーレン' were correctly mapped. Crucially, the system validated its status as the #1 Ranked anime with a score of 9.39, confirming the API's real-time accuracy.</p>
+          
+          <!-- Visual Data Point -->
+          <div class="data-point">
+            <span class="data-label">MAL ID:</span> <span class="data-value">52991</span>
+            <span class="data-label">RANK:</span> <span class="data-value">#1</span>
+            <span class="data-label">SCORE:</span> <span class="data-value">9.39</span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- API ENDPOINTS -->
-    <section class="section" aria-labelledby="api-title">
-      <div class="card card--yellow">
-        <h2 id="api-title">JIKAN API INTEGRATION</h2>
-        <p><strong>Base URL:</strong> <code>https://api.jikan.moe/v4</code></p>
-        
-        <h3>Endpoints Used:</h3>
-        <table class="results-table">
-          <thead>
-            <tr>
-              <th>Endpoint</th>
-              <th>Purpose</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td><code>/anime/{id}/full</code></td>
-              <td>Complete anime metadata</td>
-            </tr>
-            <tr>
-              <td><code>/anime/{id}/characters</code></td>
-              <td>Character & voice actor data</td>
-            </tr>
-            <tr>
-              <td><code>/anime/{id}/staff</code></td>
-              <td>Staff information</td>
-            </tr>
-          </tbody>
-        </table>
-        
-        <p style="margin-top: 16px;"><strong>Rate Limiting:</strong> 1-second delay between requests to respect API limits</p>
-      </div>
-    </section>
+      <!-- PRODUCTION INSIGHTS -->
+      <section class="section">
+        <div class="card card--pink">
+          <h2 data-i18n="studio_title">PRODUCTION DATA</h2>
+          <p data-i18n="studio_text">A critical part of the schema is the 'Company' interface. The PoC verified that 'Madhouse' is correctly listed with the specific type 'Studio'. This distinction between Licensors, Producers, and Studios is vital for accurate data modeling.</p>
+        </div>
+      </section>
+
+      <!-- CAST & CHARACTERS -->
+      <section class="section">
+        <div class="card">
+          <h2 data-i18n="cast_title">CAST & CHARACTERS</h2>
+          <p data-i18n="cast_text">The complex nested relationship between Characters and Voice Actors was tested. The system successfully identified 'Frieren' as a 'Main' character and linked her to 'Tanezaki, Atsumi', the Japanese voice actor. This validates the recursive mapping logic of the fetcher.</p>
+        </div>
+      </section>
+
+      <!-- TECHNICAL CONCLUSION -->
+      <section class="section">
+        <div class="card card--yellow">
+          <h2 data-i18n="conclusion_title">TECHNICAL VERDICT</h2>
+          <p data-i18n="conclusion_text">The PoC demonstrates that a strict TypeScript architecture can robustly handle the nested and sometimes inconsistent data from public APIs. All 16 unit tests passed, ensuring that the data for 'Sousou no Frieren' is not only present but structurally sound.</p>
+        </div>
+      </section>
+
+    </article>
 
     <!-- CTA BUTTONS -->
     <section class="section" style="text-align: center;">
-      <a href="https://github.com" class="btn" aria-label="View source code on GitHub">
-        VIEW ON GITHUB
-      </a>
-      <a href="https://github.com" class="btn btn--cyan" aria-label="Read documentation">
-        READ DOCS
-      </a>
+      <a href="https://github.com" class="btn" data-i18n="btn_github">VIEW SOURCE</a>
+      <a href="https://github.com" class="btn btn--cyan" data-i18n="btn_docs">READ DOCS</a>
     </section>
 
   </div>
 
   <!-- FOOTER -->
-  <footer class="footer" role="contentinfo">
+  <footer class="footer">
     <div class="container">
-      <p style="margin-bottom: 16px; font-size: 1.25rem; font-weight: 700;">
-        ⚡ ANIME POC - TYPESCRIPT + JIKAN API ⚡
-      </p>
-      <p>
-        Built with TypeScript, tested with a custom framework, powered by the 
-        <a href="https://jikan.moe/" target="_blank" rel="noopener noreferrer">Jikan API</a>
-      </p>
-      <p style="margin-top: 16px; font-size: 0.875rem;">
-        ★ 16/16 Tests Passing ★ Zero External Test Dependencies ★ Strict Type Safety ★
-      </p>
+      <p data-i18n="footer_text">Built with TypeScript & Jikan API</p>
     </div>
   </footer>
 
+  <script src="js/translations.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
