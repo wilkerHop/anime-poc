@@ -1,6 +1,11 @@
 # Anime PoC - Jikan API Integration
 
+[![CI](https://github.com/USERNAME/anime-poc/actions/workflows/ci.yml/badge.svg)](https://github.com/USERNAME/anime-poc/actions/workflows/ci.yml)
+
 A TypeScript Proof-of-Concept demonstrating how to fetch and validate anime data from the [Jikan API](https://jikan.moe/) (MyAnimeList scraper).
+
+**🌐 [View Live Demo](https://USERNAME.github.io/anime-poc/)**
+
 
 ## Features
 
@@ -129,6 +134,23 @@ Score: 9.39 (Ranked #1)
 - **Node.js** 18+
 - **Jikan API v4** - MyAnimeList data source
 
+## CI/CD & Deployment
+
+This project uses GitHub Actions for continuous integration and deployment:
+
+- **CI Workflow** - Automatically runs on every push to `main`:
+  - TypeScript build verification
+  - Unit test execution (16 tests)
+  - PoC integration test
+  
+- **GitHub Pages** - Automated deployment:
+  - Neo-brutalist design showcase
+  - Live test results
+  - Deployed from `/docs` directory
+
+View the live site at: **[USERNAME.github.io/anime-poc](https://USERNAME.github.io/anime-poc/)**
+
 ## License
 
 ISC
+
