@@ -1,10 +1,14 @@
 # Anime PoC - Jikan API Integration
 
+<!-- Uncomment after pushing to GitHub and replace USERNAME with your GitHub username:
 [![CI](https://github.com/USERNAME/anime-poc/actions/workflows/ci.yml/badge.svg)](https://github.com/USERNAME/anime-poc/actions/workflows/ci.yml)
+-->
 
 A TypeScript Proof-of-Concept demonstrating how to fetch and validate anime data from the [Jikan API](https://jikan.moe/) (MyAnimeList scraper).
 
+<!-- Uncomment after enabling GitHub Pages and replace USERNAME with your GitHub username:
 **🌐 [View Live Demo](https://USERNAME.github.io/anime-poc/)**
+-->
 
 
 ## Features
