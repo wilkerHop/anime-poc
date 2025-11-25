@@ -360,5 +360,8 @@ async function runTest() {
   }
 }
 
-// Execute
-runTest();
+// Execute only if this file is run directly (not imported)
+if (import.meta.url === `file://${process.argv[1]}`) {
+  runTest();
+}
+
